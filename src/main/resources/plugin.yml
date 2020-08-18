@@ -1,0 +1,11 @@
+name: FrozedSumo
+main: club.frozed.frozedsumo.FrozedSumo
+description: SumoCore - Practice-like FrozedSumo Core
+version: 1.0-RELEASE
+author: Elb1to
+website: www.frozed.club
+commands:
+  sumo:
+  arena:
+  setspawn:
+  duel:

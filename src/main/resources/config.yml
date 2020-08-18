@@ -1,0 +1,35 @@
+#
+# Sumo FrozedSumo - Practice-like FrozedSumo for Sumo
+# Developed by Elb1to (Elb1to#0001)
+#
+Verification:
+  HWID: ''
+
+LobbyServer: 'Hub'
+
+SCOREBOARD:
+  TITLE: "&b&lExample &7| &fSUMO"
+  LOBBY:
+    - "&7&m-----------------------"
+    - "&fOnline: &b<online_players>"
+    - "&fPlaying: &b<match_players>"
+    - " "
+    - "&bmc.example.net"
+    - "&7&m-----------------------"
+  MATCH:
+    - "&7&m-----------------------"
+    - "&fOpponent: &b<opponent>"
+    - "&fKit: &bSumo"
+    - " "
+    - "&fPing: &b<player_ping> &7┃ &b<opponent_ping>"
+    - "&fCPS: &b<player_cps> &7┃ &b<opponent_cps>"
+    - " "
+    - "&bmc.example.net"
+    - "&7&m-----------------------"
+  MATCH-END:
+    - "&7&m-----------------------"
+    - "&fMatch ended"
+    - "&fLoser: &b<opponent>"
+    - " "
+    - "&bmc.example.net"
+    - "&7&m-----------------------"
