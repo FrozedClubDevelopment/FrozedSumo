@@ -65,7 +65,7 @@ public class AssembleThread extends Thread {
                 board.getEntries().clear();
             } else {
                 // Reverse the lines because scoreboard scores are in descending order
-                if (!this.assemble.getAssembleStyle().isDecending()) {
+                if (!this.assemble.getAssembleStyle().isDescending()) {
                     Collections.reverse(newLines);
                 }
 
@@ -98,7 +98,7 @@ public class AssembleThread extends Thread {
                     // Update text, setup the team, and update the display values
                     entry.setText(line);
                     entry.setup();
-                    entry.send(this.assemble.getAssembleStyle().isDecending() ? cache-- : cache++);
+                    entry.send(this.assemble.getAssembleStyle().isDescending() ? cache-- : cache++);
                 }
             }
 

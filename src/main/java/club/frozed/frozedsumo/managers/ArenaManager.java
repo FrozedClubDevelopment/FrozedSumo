@@ -2,8 +2,8 @@ package club.frozed.frozedsumo.managers;
 
 import club.frozed.frozedsumo.FrozedSumo;
 import club.frozed.frozedsumo.game.Arena;
-import org.bukkit.Location;
 import club.frozed.frozedsumo.utils.LocationUtil;
+import org.bukkit.Location;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,8 +22,7 @@ public class ArenaManager {
         for (String r : FrozedSumo.arenaConfig.getConfigurationSection("Arenas").getKeys(false)) {
             Location spawn1 = LocationUtil.toLoc(FrozedSumo.arenaConfig.getString("Arenas." + r + ".spawn1"));
             Location spawn2 = LocationUtil.toLoc(FrozedSumo.arenaConfig.getString("Arenas." + r + ".spawn2"));
-            Arena arena = new Arena(r,spawn1,spawn2);
-            if (arena == null)continue;
+            Arena arena = new Arena(r, spawn1, spawn2);
             arenas.add(arena);
         }
     }

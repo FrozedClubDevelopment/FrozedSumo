@@ -13,7 +13,7 @@ import club.frozed.frozedsumo.providers.GameScoreboard;
 import club.frozed.frozedsumo.utils.Messages;
 import club.frozed.frozedsumo.utils.assemble.Assemble;
 import club.frozed.frozedsumo.utils.assemble.AssembleStyle;
-import club.frozed.frozedsumo.world.WorldListener;
+import club.frozed.frozedsumo.listeners.WorldListener;
 import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
@@ -44,20 +44,21 @@ public class FrozedSumo extends JavaPlugin {
     public void onEnable() {
         instance = this;
 
-        if (!this.getDescription().getAuthors().contains("Elb1to") || !this.getDescription().getName().equals("SumoCore") || !this.getDescription().getDescription().equals("SumoCore - Practice-like FrozedSumo for Sumo")) {
-            Bukkit.getPluginManager().disablePlugin(this);
+        if (!this.getDescription().getAuthors().contains("Elb1to") || !this.getDescription().getName().equals("FrozedSumo") || !this.getDescription().getDescription().equals("FrozedSumo - Practice-like core for Sumo")) {
+            System.exit(0);
+            Bukkit.shutdown();
         }
 
         queueManager = new QueueManager();
         arenaManager = new ArenaManager();
         matchManager = new MatchManager();
-        registerConfigs();
 
         getServer().getConsoleSender().sendMessage(Messages.CC(" "));
         getServer().getConsoleSender().sendMessage(Messages.CC("&7&m-------------------------------------------"));
-        getServer().getConsoleSender().sendMessage(Messages.CC("&b&lSumoCore &7- &f" + getDescription().getVersion()));
+        getServer().getConsoleSender().sendMessage(Messages.CC("&b&lFrozedSumo &7- &f" + getDescription().getVersion()));
         getServer().getConsoleSender().sendMessage(Messages.CC("&7Developed by &bElb1to"));
         getServer().getConsoleSender().sendMessage(Messages.CC(" "));
+        registerConfigs();
         registerListeners();
         registerCommands();
         registerStuffs();
@@ -96,11 +97,11 @@ public class FrozedSumo extends JavaPlugin {
     }
 
     public void registerListeners() {
-        Bukkit.getPluginManager().registerEvents(new QueueListener(), this);
         Bukkit.getPluginManager().registerEvents(new PlayerDataListener(), this);
+        Bukkit.getPluginManager().registerEvents(new PlayerListener(), this);
+        Bukkit.getPluginManager().registerEvents(new QueueListener(), this);
         Bukkit.getPluginManager().registerEvents(new MatchListener(), this);
         Bukkit.getPluginManager().registerEvents(new StatsListener(), this);
-        Bukkit.getPluginManager().registerEvents(new PlayerListener(), this);
         Bukkit.getPluginManager().registerEvents(new WorldListener(), this);
         Bukkit.getPluginManager().registerEvents(new DuelListener(), this);
 

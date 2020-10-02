@@ -127,6 +127,7 @@ public class Match {
             PlayerDataListener.SetState(player1.getUniqueId(), PlayerState.FIGHTING);
             player1.getInventory().clear();
             player1.teleport(getArena().getSpawn1());
+
             for (Player all : FrozedSumo.getInstance().getServer().getOnlinePlayers()) {
                 all.hidePlayer(player1);
                 player1.hidePlayer(all);
@@ -140,12 +141,14 @@ public class Match {
             PlayerDataListener.SetState(player2.getUniqueId(), PlayerState.FIGHTING);
             player2.getInventory().clear();
             player2.teleport(getArena().getSpawn2());
+
             for (Player all : FrozedSumo.getInstance().getServer().getOnlinePlayers()) {
                 if (!getTeam1().contains(all)) {
                     all.hidePlayer(player2);
                     player2.hidePlayer(all);
                 }
             }
+
             for (Player t2 : getTeam1()) {
                 player2.showPlayer(t2);
             }

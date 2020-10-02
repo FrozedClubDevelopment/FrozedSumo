@@ -1,4 +1,4 @@
-package club.frozed.frozedsumo.world;
+package club.frozed.frozedsumo.listeners;
 
 import org.bukkit.Difficulty;
 import org.bukkit.event.EventHandler;

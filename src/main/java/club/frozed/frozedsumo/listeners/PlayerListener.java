@@ -100,6 +100,11 @@ public class PlayerListener implements Listener {
             if (match == null) return;
             if (match.isEnded()) return;
             Material block = event.getPlayer().getLocation().getBlock().getType();
+
+            //if (block == Material.PISTON_EXTENSION) {
+            //
+            //}
+
             if (block == Material.STATIONARY_WATER || block == Material.WATER) {
                 if (match.isBestof() && match.isStarted()) {
 

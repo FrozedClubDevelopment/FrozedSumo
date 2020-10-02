@@ -11,7 +11,6 @@ public class Stats {
     private int matches;
     private int wins;
     private int losses;
-    private int hits;
 
     public Stats(Player player) {
         this.player = player;
