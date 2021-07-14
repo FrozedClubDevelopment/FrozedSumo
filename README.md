@@ -2,7 +2,7 @@
 Practice-Like Sumo Plugin
 
 ## Disclaimer
-This used to be a paid resource, but I barely updated it and I only sold 1 copy of it, since it wasn't profitable enough for me I decided to open source this. This was previously made for a server called Sumo.RIP, owned by Brou a few years ago.
+This used to be a paid resource, but I barely updated it and I only sold 1 copy of it, since it wasn't profitable enough for me I decided to open source this. This was previously made for a server called Sumo.RIP, owned by Brou a few years ago. The code on this is as outdated as the old FrozedDisguise, that means old FrozedDisguise and FrozedSumo were originally written almost 3 years ago.
 
 ### Usage terms:
   * You cannot claim that this was all made from scratch by you.
